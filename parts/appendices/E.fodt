@@ -21045,7 +21045,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table4.A2" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents">A character string that defines the name of the OPM Flow input file which contains the simulator’s ECLIPSE formatted input deck to be simulated.</text:p>
-       <text:p text:style-name="P990">Note that there must be no spaces in the filename. If there are spaces, which can typically occur on Windows based systems, then the filename should be enclosed in quotes; thus instead of FILE NAME use “FILE NAME”</text:p>
+       <text:p text:style-name="P990">Note that there must be no spaces in the filename. If there are spaces, which can typically occur on Windows based systems, then the filename should be enclosed in quotes; thus instead of FILE NAME use “FILE NAME”.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table4.D2" office:value-type="string">
        <text:p text:style-name="P258">“”</text:p>
