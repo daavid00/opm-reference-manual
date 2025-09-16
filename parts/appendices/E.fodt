@@ -20716,7 +20716,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="_40_TextBody">will start the simulator and run the case specified by CASENAME.DATA. <text:s/></text:p>
     <text:p text:style-name="_40_TextBody">OPM Flow accepts command line options to control various aspects of the simulator’s run time behavior, as described in the table below. <text:s/>To give a command line option use “key=value” syntax, with no spaces around the equals sign. It is also possible to put multiple options together in a parameter file. To do so, put one option on each line of the file with “.param” as the extension and pass that filename as a command line parameter to OPM Flow using:</text:p>
     <text:p text:style-name="_40_Example"/>
-    <text:p text:style-name="_40_Example"><text:tab/><text:tab/><text:tab/>flow --parameter-file=CASENAME.PARAM</text:p>
+    <text:p text:style-name="_40_Example"><text:tab/><text:tab/><text:tab/>flow --parameter-file=CASENAME.param</text:p>
     <text:p text:style-name="_40_TextBody"/>
     <text:p text:style-name="_40_TextBody">to instruct OPM Flow to read the parameter file. </text:p>
     <table:table table:name="Table4" table:style-name="Table4">
@@ -20974,7 +20974,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">--dbph-max-rel</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table4.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A real positive value that sets maximum relative change of the bottom-hole pressure in a single iteration</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A real positive value that sets the maximum relative change of the bottom-hole pressure in a single iteration.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table4.D2" office:value-type="string">
        <text:p text:style-name="P238">1.0</text:p>
@@ -21469,7 +21469,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P674">--full-time-step-initially <text:s text:c="19"/></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table4.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A boolean value that instructs OPM Flow to always attempt to finish a report step using a single time step (true) or not (false). </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A boolean value that instructs OPM Flow to always attempt to finish a report step using a single time step (true) or not (false).</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table4.D2" office:value-type="string">
        <text:p text:style-name="P213">false</text:p>
@@ -21525,7 +21525,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P674">--ilu-relaxation <text:s text:c="31"/></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table4.C53" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A real positive double precision value that sets the relaxation factor of the linear solver&apos;s ILU preconditioner</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A real positive double precision value that sets the relaxation factor of the linear solver&apos;s ILU preconditioner.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table4.D53" office:value-type="string">
        <text:p text:style-name="P281">0.9</text:p>
@@ -21539,7 +21539,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P674">--ilu-reorder-spheres</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table4.C56" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A boolean value that specifies OPM Flow to reorder the entries of the matrix in the red-black ILU preconditioner in spheres starting at an edge (true) or not (false)</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A boolean value that specifies OPM Flow to reorder the entries of the matrix in the red-black ILU preconditioner in spheres starting at an edge (true) or not (false).</text:p>
        <text:p text:style-name="_40_Table_20_Contents">If false the original ordering is preserved in each color. Otherwise try to ensure D4 ordering (in a 2D structured grid, the diagonal elements are consecutive).</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table4.D56" office:value-type="string">
@@ -21749,7 +21749,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table4.C68" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents">A real positive double precision value that sets the minimum reduction of the residual for the linear solver. The linear solver convergences when the residual is reduced sufficiently. </text:p>
-       <text:p text:style-name="_40_Table_20_Contents">The simulator now overrides the default reduction to be 0.005 instead of 0.01, if the linear solver has been set to one of the cpr options, in a similar manner as how the default maximum number of linear iterations for the cpr and cprw options are changed to 20 instead of 100, unless specified by the command line option by the user. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">The simulator now overrides the default reduction to be 0.005 instead of 0.01, if the linear solver has been set to one of the cpr options, in a similar manner as how the default maximum number of linear iterations for the cpr and cprw options are changed to 20 instead of 200, unless specified by the command line option by the user. </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table4.D68" office:value-type="string">
        <text:p text:style-name="P306">0.01</text:p>
@@ -21816,7 +21816,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P674">--load-step</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table4.A2" office:value-type="string">
-       <text:p text:style-name="P998">An integer value that determines if the simulator should load the serialized state from OPM Flow&apos;s version of the restart file. and should be set to either a specific report step, or 0 to load the last stored report step. </text:p>
+       <text:p text:style-name="P998">An integer value that determines if the simulator should load the serialized state from OPM Flow&apos;s version of the restart file, and should be set to either a specific report step, or 0 to load the last stored report step. </text:p>
        <text:p text:style-name="P970">The default value of -1 does not load the data from the OPM Flow specific restart file.</text:p>
        <text:p text:style-name="P970">OPM Flow&apos;s version of the restart file, is written using the <text:span text:style-name="T37">--save-step=N</text:span> option.</text:p>
       </table:table-cell>
@@ -21987,7 +21987,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P674">--max-newton-iterations-with-inner-well-iterations</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table4.A2" office:value-type="string">
-       <text:p text:style-name="P870">A positive integer that specifies the maximum newton iterations with inner well iterations.</text:p>
+       <text:p text:style-name="P870">A positive integer that specifies the maximum Newton iterations with inner well iterations.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table4.D2" office:value-type="string">
        <text:p text:style-name="P213">8</text:p>
@@ -22127,7 +22127,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">--metis-params</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table4.C94" office:value-type="string">
-       <text:p text:style-name="P999">A character string. Configuration of Metis partitioner. You can request a configuration to be read from a JSON file by giving the filename here, ending with &apos;.json.&apos; See http://glaros.dtc.umn.edu/gkhome/fetch/sw/metis/manual.pdffor available METIS options.</text:p>
+       <text:p text:style-name="P999">A character string. Configuration of Metis partitioner. You can request a configuration to be read from a JSON file by giving the filename here, ending with &apos;.json.&apos; See http://glaros.dtc.umn.edu/gkhome/fetch/sw/metis/manual.pdf for available METIS options.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table4.D94" office:value-type="string">
        <text:p text:style-name="P213">&quot;default&quot;</text:p>
@@ -22547,7 +22547,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P1045"><text:span text:style-name="T6">&quot;steps&quot;</text:span> writes out convergence information per time step, to a CASENAME.INFOSTEP file. The file is useful for identifying numerical issues. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P1045"><text:span text:style-name="T6">&quot;iterations&quot; </text:span>writes out n<text:span text:style-name="T6">on-linear convergence metrics, i.e., the MB and CNV values, per phase, for each non-linear iteration in each time</text:span> <text:span text:style-name="T6">step</text:span>, to a CASENAME.<text:span text:style-name="T26">INFOITER</text:span><text:span text:style-name="T6"> file. </text:span></text:p>
+         <text:p text:style-name="P1045"><text:span text:style-name="T6">&quot;iterations&quot; </text:span>writes out n<text:span text:style-name="T6">on-linear convergence metrics, i.e., the MB and CNV values, per phase, for each non-linear iteration in each time</text:span> <text:span text:style-name="T6">step</text:span>, to a CASENAME.INFOITER file.</text:p>
         </text:list-item>
        </text:list>
        <text:p text:style-name="P839">Options can be c<text:span text:style-name="T6">ombin</text:span>ed<text:span text:style-name="T6"> with commas, e.g.&quot;steps,iterations&quot; for multiple outputs.</text:span> </text:p>
@@ -22592,7 +22592,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
         </text:list-item>
        </text:list>
        <text:p text:style-name="_40_Table_20_Contents">For example to just output logging information use:</text:p>
-       <text:p text:style-name="P984">--output-mode=”log” </text:p>
+       <text:p text:style-name="P984">--output-mode=“log”.</text:p>
        <text:p text:style-name="P1002">or</text:p>
        <text:p text:style-name="P984">--output-mode=false</text:p>
       </table:table-cell>
@@ -23007,7 +23007,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table4.A2" office:value-type="string">
        <text:p text:style-name="P1006">A boolean value that determines if the simulator should fully solve the well equations before each iteration of the reservoir model (true), or not (false).</text:p>
-       <text:p text:style-name="_40_Table_20_Contents">Note that the well equations are <text:span text:style-name="T33">always</text:span> added to the full system and solved <text:span text:style-name="T33">until</text:span> converged. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">Note that the well equations are <text:span text:style-name="T33">always</text:span> added to the full system and solved until convergence.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table4.D2" office:value-type="string">
        <text:p text:style-name="P213">true</text:p>
@@ -23050,7 +23050,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P935"><text:span text:style-name="T13">--solver-max-growth</text:span> <text:s text:c="28"/></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table4.A2" office:value-type="string">
-       <text:p text:style-name="P681">A real positive value that specifies the maximum growth factor a time step can be increased by after a report time step. subject to the maximum allowable time step size set by the --solver-max-time-step-<text:soft-page-break/>in-days parameter.</text:p>
+       <text:p text:style-name="P681">A real positive value that specifies the maximum growth factor a time step can be increased by after a report time step, subject to the maximum allowable time step size set by the --solver-max-time-step-<text:soft-page-break/>in-days parameter.</text:p>
        <text:p text:style-name="P636">T<text:span text:style-name="T40">hus, if </text:span>the current time step has converged at 5 days after a<text:span text:style-name="T40">t a report</text:span> step<text:span text:style-name="T40">,</text:span> <text:s/>and --solver-<text:span text:style-name="T41">max-</text:span>growth is set to the default value of <text:span text:style-name="T40">3</text:span>.0, then the next time step will be <text:span text:style-name="T40">3</text:span>.0 * 5 days, that is at 1<text:span text:style-name="T40">5 </text:span>days.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table4.D2" office:value-type="string">
@@ -23152,7 +23152,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">--strict-outer-iter-wells</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table4.C158" office:value-type="string">
-       <text:p text:style-name="P1009">A positive integer that specifies the number of newton iterations for which wells are checked with strict tolerance.</text:p>
+       <text:p text:style-name="P1009">A positive integer that specifies the number of Newton iterations for which wells are checked with strict tolerance.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table4.D160" office:value-type="string">
        <text:p text:style-name="P518">6</text:p>
@@ -23208,7 +23208,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P674">--time-step-after-event-in-days <text:s text:c="11"/></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table4.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A real double precision value that sets maximum allowed time step after an event; for example, when a well is open or closed <text:soft-page-break/>etc. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A real double precision value that sets the maximum allowed time step after an event; for example, when a well is open or closed <text:soft-page-break/>etc. </text:p>
        <text:p text:style-name="P990">The default value of -1 means that events to do effect the time stepping.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table4.D2" office:value-type="string">
@@ -23280,7 +23280,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P674">--time-step-control-file-name <text:s text:c="18"/></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table4.C166" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A character string enclosed in quotes that specifies a filename where time steps are specified. The default is the character string timesteps</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A character string enclosed in quotes that specifies a filename where time steps are specified. The default is the character string timesteps.</text:p>
        <text:p text:style-name="_40_Table_20_Contents">For instance time steps can be generated by the ecl_summary application in libecl as per the following UNIX command line: </text:p>
        <text:p text:style-name="_40_Table_20_Contents"/>
        <text:p text:style-name="P726">path_to_libecl_applications/ecl_summary DECK TIME &gt; filename</text:p>
@@ -23402,7 +23402,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P935"><text:span text:style-name="T13">--tolerance-cnv</text:span><text:span text:style-name="T21">-energy</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table4.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A real value. Local energy convergence tolerance (Maximum of local energy errors).</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A real value. Local energy convergence tolerance (maximum of local energy errors).</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table4.D2" office:value-type="string">
        <text:p text:style-name="P213">0.01</text:p>
@@ -23724,7 +23724,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P964">will start the simulator and run the case specified by CASENAME.DATA. <text:s/></text:p>
     <text:p text:style-name="_40_TextBody">OPM Flow accepts command line options to control various aspects of the simulator’s run time behavior, as described in the table below. <text:s/>To give a command line option use “key=value” syntax, with no spaces around the equals sign. It is also possible to put multiple options together in a parameter file. To do so, put one option on each line of the file with “.param” as the extension and pass that filename as a command line parameter to OPM Flow using:</text:p>
     <text:p text:style-name="_40_Example"/>
-    <text:p text:style-name="_40_Example"><text:tab/><text:tab/><text:tab/>flow --parameter-file=CASENAME.PARAM</text:p>
+    <text:p text:style-name="_40_Example"><text:tab/><text:tab/><text:tab/>flow --parameter-file=CASENAME.param</text:p>
     <text:p text:style-name="_40_TextBody"/>
     <text:p text:style-name="P1094">to instruct OPM Flow to read the parameter file. </text:p>
     <table:table table:name="Table3_1" table:style-name="Table3_5f_1">
@@ -23912,7 +23912,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">--dbph-max-rel</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table3_5f_1.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A real positive value that sets maximum relative change of the bottom-hole pressure in a single iteration</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A real positive value that sets the maximum relative change of the bottom-hole pressure in a single iteration.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table3_5f_1.D2" office:value-type="string">
        <text:p text:style-name="P238">1.0</text:p>
@@ -23983,7 +23983,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table3_5f_1.A2" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents">A character string that defines the name of the OPM Flow input file which contains the simulator’s ECLIPSE formatted input deck to be simulated.</text:p>
-       <text:p text:style-name="P990">Note that there must be no spaces in the filename. If there are spaces, which can typically occur on Windows based systems, then the filename should be enclosed in quotes; thus instead of FILE NAME use “FILE NAME”</text:p>
+       <text:p text:style-name="P990">Note that there must be no spaces in the filename. If there are spaces, which can typically occur on Windows based systems, then the filename should be enclosed in quotes; thus instead of FILE NAME use “FILE NAME”.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table3_5f_1.D2" office:value-type="string">
        <text:p text:style-name="P258">“”</text:p>
@@ -24490,7 +24490,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P674">--full-time-step-initially <text:s text:c="19"/></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table3_5f_1.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A boolean value that instructs OPM Flow to always attempt to finish a report step using a single time step (true) or not (false). </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A boolean value that instructs OPM Flow to always attempt to finish a report step using a single time step (true) or not (false).</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table3_5f_1.D2" office:value-type="string">
        <text:p text:style-name="P213">false</text:p>
@@ -24546,7 +24546,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P674">--ilu-relaxation <text:s text:c="31"/></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table3_5f_1.C54" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A real positive double precision value that sets the relaxation factor of the linear solver&apos;s ILU preconditioner</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A real positive double precision value that sets the relaxation factor of the linear solver&apos;s ILU preconditioner.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table3_5f_1.D54" office:value-type="string">
        <text:p text:style-name="P281">0.9</text:p>
@@ -24560,7 +24560,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P674">--ilu-reorder-spheres</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table3_5f_1.C54" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A boolean value that specifies OPM Flow to reorder the entries of the matrix in the red-black ILU preconditioner in spheres starting at an edge (true) or not (false)</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A boolean value that specifies OPM Flow to reorder the entries of the matrix in the red-black ILU preconditioner in spheres starting at an edge (true) or not (false).</text:p>
        <text:p text:style-name="_40_Table_20_Contents">If false the original ordering is preserved in each color. Otherwise try to ensure D4 ordering (in a 2D structured grid, the diagonal elements are consecutive).</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table3_5f_1.D54" office:value-type="string">
@@ -24698,7 +24698,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table3_5f_1.C64" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents">A real positive double precision value that sets the minimum reduction of the residual for the linear solver. The linear solver convergences when the residual is reduced sufficiently. </text:p>
-       <text:p text:style-name="_40_Table_20_Contents">The simulator now overrides the default reduction to be 0.005 instead of 0.01, if the linear solver has been set to one of the cpr options, in a similar manner as how the default maximum number of linear <text:soft-page-break/>iterations for the cpr and cprw options are changed to 20 instead of 100, unless specified by the command line option by the user. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">The simulator now overrides the default reduction to be 0.005 instead of 0.01, if the linear solver has been set to one of the cpr options, in a similar manner as how the default maximum number of linear <text:soft-page-break/>iterations for the cpr and cprw options are changed to 20 instead of 200, unless specified by the command line option by the user. </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table3_5f_1.D64" office:value-type="string">
        <text:p text:style-name="P306">0.01</text:p>
@@ -24765,7 +24765,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P674">--load-step</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table3_5f_1.A2" office:value-type="string">
-       <text:p text:style-name="P998">An integer value that determines if the simulator should load the serialized state from OPM Flow&apos;s version of the restart file. and should be set to either a specific report step, or 0 to load the last stored report step. </text:p>
+       <text:p text:style-name="P998">An integer value that determines if the simulator should load the serialized state from OPM Flow&apos;s version of the restart file, and should be set to either a specific report step, or 0 to load the last stored report step. </text:p>
        <text:p text:style-name="P970">The default value of -1 does not load the data from the OPM Flow specific restart file.</text:p>
        <text:p text:style-name="P970">OPM Flow&apos;s version of the restart file, is written using the <text:span text:style-name="T37">--save-step=N</text:span> option.</text:p>
       </table:table-cell>
@@ -24935,7 +24935,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P674">--max-newton-iterations-with-inner-well-iterations</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table3_5f_1.A2" office:value-type="string">
-       <text:p text:style-name="P870">A positive integer that specifies the maximum newton iterations with inner well iterations.</text:p>
+       <text:p text:style-name="P870">A positive integer that specifies the maximum Newton iterations with inner well iterations.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table3_5f_1.D2" office:value-type="string">
        <text:p text:style-name="P213">8</text:p>
@@ -25440,7 +25440,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P1045"><text:span text:style-name="T6">&quot;steps&quot;</text:span> writes out convergence information per time step, to a CASENAME.INFOSTEP file. The file is useful for identifying numerical issues. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P1045"><text:span text:style-name="T6">&quot;iterations&quot; </text:span>writes out n<text:span text:style-name="T6">on-linear convergence metrics, i.e., the MB and CNV values, per phase, for each non-linear iteration in each time</text:span> <text:span text:style-name="T6">step</text:span>, to a CASENAME.<text:span text:style-name="T26">INFOITER</text:span><text:span text:style-name="T6"> file. </text:span></text:p>
+         <text:p text:style-name="P1045"><text:span text:style-name="T6">&quot;iterations&quot; </text:span>writes out n<text:span text:style-name="T6">on-linear convergence metrics, i.e., the MB and CNV values, per phase, for each non-linear iteration in each time</text:span> <text:span text:style-name="T6">step</text:span>, to a CASENAME.INFOITER file.</text:p>
         </text:list-item>
        </text:list>
        <text:p text:style-name="P839">Options can be c<text:span text:style-name="T6">ombin</text:span>ed<text:span text:style-name="T6"> with commas, e.g.&quot;steps,iterations&quot; for multiple outputs.</text:span> </text:p>
@@ -25485,7 +25485,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
         </text:list-item>
        </text:list>
        <text:p text:style-name="_40_Table_20_Contents">For example to just output logging information use:</text:p>
-       <text:p text:style-name="P984">--output-mode=”log” </text:p>
+       <text:p text:style-name="P984">--output-mode=“log”.</text:p>
        <text:p text:style-name="P1002"><text:soft-page-break/>or</text:p>
        <text:p text:style-name="P984">--output-mode=false</text:p>
       </table:table-cell>
@@ -25886,7 +25886,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table3_5f_1.A2" office:value-type="string">
        <text:p text:style-name="P1006">A boolean value that determines if the simulator should fully solve the well equations before each iteration of the reservoir model (true), or not (false).</text:p>
-       <text:p text:style-name="_40_Table_20_Contents">Note that the well equations are <text:span text:style-name="T33">always</text:span> added to the full system and solved <text:span text:style-name="T33">until</text:span> converged. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">Note that the well equations are <text:span text:style-name="T33">always</text:span> added to the full system and solved until convergence.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table3_5f_1.D2" office:value-type="string">
        <text:p text:style-name="P213">true</text:p>
@@ -25929,7 +25929,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P935"><text:span text:style-name="T13">--solver-max-growth</text:span> <text:s text:c="28"/></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table3_5f_1.A2" office:value-type="string">
-       <text:p text:style-name="P681">A real positive value that specifies the maximum growth factor a time step can be increased by after a report time step. subject to the maximum allowable time step size set by the --solver-max-time-step-in-days parameter.</text:p>
+       <text:p text:style-name="P681">A real positive value that specifies the maximum growth factor a time step can be increased by after a report time step, subject to the maximum allowable time step size set by the --solver-max-time-step-in-days parameter.</text:p>
        <text:p text:style-name="P636">T<text:span text:style-name="T40">hus, if </text:span>the current time step has converged at 5 days after a<text:span text:style-name="T40">t a report</text:span> step<text:span text:style-name="T40">,</text:span> <text:s/>and --solver-<text:span text:style-name="T41">max-</text:span>growth is set to the default value of <text:span text:style-name="T40">3</text:span>.0, then the next time step will be <text:span text:style-name="T40">3</text:span>.0 * 5 days, that is at 1<text:span text:style-name="T40">5 </text:span>days.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table3_5f_1.D2" office:value-type="string">
@@ -26031,7 +26031,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">--strict-outer-iter-wells</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table3_5f_1.C149" office:value-type="string">
-       <text:p text:style-name="P1009">A positive integer that specifies the number of newton iterations for which wells are checked with strict tolerance.</text:p>
+       <text:p text:style-name="P1009">A positive integer that specifies the number of Newton iterations for which wells are checked with strict tolerance.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table3_5f_1.D151" office:value-type="string">
        <text:p text:style-name="P518">6</text:p>
@@ -26102,7 +26102,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P674">--time-step-after-event-in-days <text:s text:c="11"/></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table3_5f_1.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A real double precision value that sets maximum allowed time step after an event; for example, when a well is open or closed etc. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A real double precision value that sets the maximum allowed time step after an event; for example, when a well is open or closed etc. </text:p>
        <text:p text:style-name="P990">The default value of -1 means that events to do effect the time stepping.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table3_5f_1.D2" office:value-type="string">
@@ -26174,7 +26174,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P674">--time-step-control-file-name <text:s text:c="18"/></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table3_5f_1.C158" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A character string enclosed in quotes that specifies a filename where time steps are specified. The default is the character string timesteps</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A character string enclosed in quotes that specifies a filename where time steps are specified. The default is the character string timesteps.</text:p>
        <text:p text:style-name="_40_Table_20_Contents">For instance time steps can be generated by the ecl_summary application in libecl as per the following UNIX command line: </text:p>
        <text:p text:style-name="_40_Table_20_Contents"><text:soft-page-break/></text:p>
        <text:p text:style-name="P726">path_to_libecl_applications/ecl_summary DECK TIME &gt; filename</text:p>
@@ -26549,7 +26549,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P964">will start the simulator and run the case specified by CASENAME.DATA. <text:s/></text:p>
     <text:p text:style-name="_40_TextBody">OPM Flow accepts command line options to control various aspects of the simulator’s run time behavior, as described in the table below. <text:s/>To give a command line option use “key=value” syntax, with no spaces around the equals sign. It is also possible to put multiple options together in a parameter file. To do so, put one option on each line of the file with “.param” as the extension and pass that filename as a command line parameter to OPM Flow using:</text:p>
     <text:p text:style-name="_40_Example"/>
-    <text:p text:style-name="_40_Example"><text:tab/><text:tab/><text:tab/>flow --parameter-file=CASENAME.PARAM</text:p>
+    <text:p text:style-name="_40_Example"><text:tab/><text:tab/><text:tab/>flow --parameter-file=CASENAME.param</text:p>
     <text:p text:style-name="_40_TextBody"/>
     <text:p text:style-name="_40_TextBody">to instruct OPM Flow to read the parameter file. </text:p>
     <table:table table:name="Table2_1" table:style-name="Table2_5f_1">
@@ -26737,7 +26737,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">--dbph-max-rel</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2_5f_1.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A real positive value that sets maximum relative change of the bottom-hole pressure in a single iteration</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A real positive value that sets the maximum relative change of the bottom-hole pressure in a single iteration.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2_5f_1.D2" office:value-type="string">
        <text:p text:style-name="P238">1.0</text:p>
@@ -27275,7 +27275,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P674">--full-time-step-initially <text:s text:c="19"/></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2_5f_1.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A boolean value that instructs OPM Flow to always attempt to finish a report step using a single time step (true) or not (false). </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A boolean value that instructs OPM Flow to always attempt to finish a report step using a single time step (true) or not (false).</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2_5f_1.D2" office:value-type="string">
        <text:p text:style-name="P281">false</text:p>
@@ -27332,7 +27332,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P674">--ilu-relaxation <text:s text:c="31"/></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2_5f_1.C51" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A real positive double precision value that sets the relaxation factor of the linear solver&apos;s ILU preconditioner</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A real positive double precision value that sets the relaxation factor of the linear solver&apos;s ILU preconditioner.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2_5f_1.D51" office:value-type="string">
        <text:p text:style-name="P281">0.9</text:p>
@@ -27346,7 +27346,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P674">--ilu-reorder-spheres</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2_5f_1.C51" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A boolean value that specifies OPM Flow to reorder the entries of the matrix in the red-black ILU preconditioner in spheres starting at an edge (true) or not (false)</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A boolean value that specifies OPM Flow to reorder the entries of the matrix in the red-black ILU preconditioner in spheres starting at an edge (true) or not (false).</text:p>
        <text:p text:style-name="_40_Table_20_Contents">If false the original ordering is preserved in each color. Otherwise try to ensure D4 ordering (in a 2D structured grid, the diagonal elements are consecutive).</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2_5f_1.D51" office:value-type="string">
@@ -27478,7 +27478,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table2_5f_1.C61" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents">A real positive double precision value that sets the minimum reduction of the residual for the linear solver. The linear solver convergences when the residual is reduced sufficiently. </text:p>
-       <text:p text:style-name="P825">The simulator now overrides the default reduction to be 0.005 instead of 0.01, if the linear solver has been set to one of the cpr options, in a similar manner as how the default maximum number of linear iterations for the cpr and cprw options are changed to 20 instead of 100, unless specified by the command line option by the user. </text:p>
+       <text:p text:style-name="P825">The simulator now overrides the default reduction to be 0.005 instead of 0.01, if the linear solver has been set to one of the cpr options, in a similar manner as how the default maximum number of linear iterations for the cpr and cprw options are changed to 20 instead of 200, unless specified by the command line option by the user. </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2_5f_1.D61" office:value-type="string">
        <text:p text:style-name="P306">0.01</text:p>
@@ -27546,7 +27546,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P674">--load-step</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2_5f_1.A2" office:value-type="string">
-       <text:p text:style-name="P998">An integer value that determines if the simulator should load the serialized state from OPM Flow&apos;s version of the restart file. and should be set to either a specific report step, or 0 to load the last stored report step. </text:p>
+       <text:p text:style-name="P998">An integer value that determines if the simulator should load the serialized state from OPM Flow&apos;s version of the restart file, and should be set to either a specific report step, or 0 to load the last stored report step. </text:p>
        <text:p text:style-name="P970">The default value of -1 does not load the data from the OPM Flow specific restart file.</text:p>
        <text:p text:style-name="P970">OPM Flow&apos;s version of the restart file, is written using the <text:span text:style-name="T37">--save-step=N</text:span> option.</text:p>
       </table:table-cell>
@@ -27717,7 +27717,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P674">--max-newton-iterations-with-inner-well-iterations</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2_5f_1.A2" office:value-type="string">
-       <text:p text:style-name="P870">A positive integer that specifies the maximum newton iterations with inner well iterations.</text:p>
+       <text:p text:style-name="P870">A positive integer that specifies the maximum Newton iterations with inner well iterations.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2_5f_1.D2" office:value-type="string">
        <text:p text:style-name="P408">8</text:p>
@@ -28256,7 +28256,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
         </text:list-item>
        </text:list>
        <text:p text:style-name="_40_Table_20_Contents">For example to just output logging information use:</text:p>
-       <text:p text:style-name="P984">--output-mode=”log” </text:p>
+       <text:p text:style-name="P984">--output-mode=“log”.</text:p>
        <text:p text:style-name="P1002">or</text:p>
        <text:p text:style-name="P984">--output-mode=false</text:p>
       </table:table-cell>
@@ -28615,7 +28615,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table2_5f_1.A2" office:value-type="string">
        <text:p text:style-name="P1006">A boolean value that determines if the simulator should fully solve the well equations before each iteration of the reservoir model (true), or not (false).</text:p>
-       <text:p text:style-name="_40_Table_20_Contents">Note that the well equations are <text:span text:style-name="T33">always</text:span> added to the full system and solved <text:span text:style-name="T33">until</text:span> converged. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">Note that the well equations are <text:span text:style-name="T33">always</text:span> added to the full system and solved until convergence.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2_5f_1.D2" office:value-type="string">
        <text:p text:style-name="P213">true</text:p>
@@ -28658,7 +28658,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P935"><text:span text:style-name="T13">--solver-max-growth</text:span> <text:s text:c="28"/></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2_5f_1.A2" office:value-type="string">
-       <text:p text:style-name="P681">A real positive value that specifies the maximum growth factor a time step can be increased by after a report time step. subject to the maximum allowable time step size set by the --solver-max-time-step-in-days parameter.</text:p>
+       <text:p text:style-name="P681">A real positive value that specifies the maximum growth factor a time step can be increased by after a report time step, subject to the maximum allowable time step size set by the --solver-max-time-step-in-days parameter.</text:p>
        <text:p text:style-name="P636">T<text:span text:style-name="T40">hus, if </text:span>the current time step has converged at 5 days after a<text:span text:style-name="T40">t a report</text:span> step<text:span text:style-name="T40">,</text:span> <text:s/>and --solver-<text:span text:style-name="T41">max-</text:span>growth is set to the default value of <text:span text:style-name="T40">3</text:span>.0, then the next time step will be <text:span text:style-name="T40">3</text:span>.0 * 5 days, that is at 1<text:span text:style-name="T40">5 </text:span>days.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2_5f_1.D2" office:value-type="string">
@@ -28761,7 +28761,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">--strict-outer-iter-wells</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2_5f_1.C142" office:value-type="string">
-       <text:p text:style-name="P1009">A positive integer that specifies the number of newton iterations for which wells are checked with strict tolerance.</text:p>
+       <text:p text:style-name="P1009">A positive integer that specifies the number of Newton iterations for which wells are checked with strict tolerance.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2_5f_1.D144" office:value-type="string">
        <text:p text:style-name="P518">6</text:p>
@@ -28817,7 +28817,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P674">--time-step-after-event-in-days <text:s text:c="11"/></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2_5f_1.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A real double precision value that sets maximum allowed time step after an event; for example, when a well is open or closed etc. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A real double precision value that sets the maximum allowed time step after an event; for example, when a well is open or closed etc. </text:p>
        <text:p text:style-name="P990">The default value of -1 means that events to do effect the time stepping.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2_5f_1.D2" office:value-type="string">
@@ -28889,7 +28889,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P674">--time-step-control-file-name <text:s text:c="18"/></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2_5f_1.C150" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A character string enclosed in quotes that specifies a filename where time steps are specified. The default is the character string timesteps</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A character string enclosed in quotes that specifies a filename where time steps are specified. The default is the character string timesteps.</text:p>
        <text:p text:style-name="_40_Table_20_Contents">For instance time steps can be generated by the ecl_summary application in libecl as per the following UNIX command line: </text:p>
        <text:p text:style-name="_40_Table_20_Contents"/>
        <text:p text:style-name="P726">path_to_libecl_applications/ecl_summary DECK TIME &gt; filename</text:p>
@@ -29250,7 +29250,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P62"/>
     <text:p text:style-name="P964">will start the simulator and run the case specified by CASENAME.DATA. <text:s/></text:p>
     <text:p text:style-name="P964">OPM Flow accepts command line options to control various aspects of the simulator’s run time behavior, as described in the table below. <text:s/>To give a command line option use “key=value” syntax, with no spaces around the equals sign. It is also possible to put multiple options together in a parameter file. To do so, put one option on each line of the file with “.param” as the extension and pass that filename as a command line parameter to OPM Flow using:</text:p>
-    <text:p text:style-name="P63"><text:tab/><text:tab/><text:tab/><text:tab/><text:tab/><text:tab/><text:tab/>flow --parameter-file=CASENAME.PARAM</text:p>
+    <text:p text:style-name="P63"><text:tab/><text:tab/><text:tab/><text:tab/><text:tab/><text:tab/><text:tab/>flow --parameter-file=CASENAME.param</text:p>
     <text:p text:style-name="P46"/>
     <text:p text:style-name="P964">to instruct OPM Flow to read the parameter file. </text:p>
     <table:table table:name="Table621" table:style-name="Table621">
@@ -29439,7 +29439,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">--dbph-max-rel</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table621.A2" office:value-type="string">
-       <text:p text:style-name="P960">A real positive value that sets maximum relative change of the bottom-hole pressure in a single iteration</text:p>
+       <text:p text:style-name="P960">A real positive value that sets the maximum relative change of the bottom-hole pressure in a single iteration.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table621.D2" office:value-type="string">
        <text:p text:style-name="P237">1.0</text:p>
@@ -29822,7 +29822,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P671">--full-time-step-initially <text:s text:c="19"/></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table621.A2" office:value-type="string">
-       <text:p text:style-name="P960">A boolean value that instructs OPM Flow to always attempt to finish a report step using a single time step (true) or not (false). </text:p>
+       <text:p text:style-name="P960">A boolean value that instructs OPM Flow to always attempt to finish a report step using a single time step (true) or not (false).</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table621.D2" office:value-type="string">
        <text:p text:style-name="P280">false</text:p>
@@ -29890,7 +29890,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P671">--ilu-relaxation <text:s text:c="31"/></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table621.C27" office:value-type="string">
-       <text:p text:style-name="P960">A real positive double precision value that sets the relaxation factor of the linear solver&apos;s ILU preconditioner</text:p>
+       <text:p text:style-name="P960">A real positive double precision value that sets the relaxation factor of the linear solver&apos;s ILU preconditioner.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table621.D41" office:value-type="string">
        <text:p text:style-name="P280">0.9</text:p>
@@ -29904,7 +29904,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P671">--ilu-reorder-spheres</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table621.C27" office:value-type="string">
-       <text:p text:style-name="P960">A boolean value that specifies OPM Flow to reorder the entries of the matrix in the red-black ILU preconditioner in spheres starting at an <text:soft-page-break/>edge (true) or not (false)</text:p>
+       <text:p text:style-name="P960">A boolean value that specifies OPM Flow to reorder the entries of the matrix in the red-black ILU preconditioner in spheres starting at an <text:soft-page-break/>edge (true) or not (false).</text:p>
        <text:p text:style-name="P960">If false the original ordering is preserved in each color. Otherwise try to ensure D4 ordering (in a 2D structured grid, the diagonal elements are consecutive).</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table621.D41" office:value-type="string">
@@ -30022,7 +30022,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table621.C50" office:value-type="string">
        <text:p text:style-name="P960">A real positive double precision value that sets the minimum reduction of the residual for the linear solver. The linear solver convergences when the residual is reduced sufficiently. </text:p>
-       <text:p text:style-name="P824">The simulator now overrides the default reduction to be 0.005 instead of 0.01, if the linear solver has been set to one of the cpr options, in a similar manner as how the default maximum number of linear iterations for the cpr and cprw options are changed to 20 instead of 100, unless specified by the command line option by the user. </text:p>
+       <text:p text:style-name="P824">The simulator now overrides the default reduction to be 0.005 instead of 0.01, if the linear solver has been set to one of the cpr options, in a similar manner as how the default maximum number of linear iterations for the cpr and cprw options are changed to 20 instead of 200, unless specified by the command line option by the user. </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table621.D50" office:value-type="string">
        <text:p text:style-name="P305">0.01</text:p>
@@ -30075,7 +30075,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P671">--load-step</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table621.A2" office:value-type="string">
-       <text:p text:style-name="P960">An integer value that determines if the simulator should load the serialized state from OPM Flow&apos;s version of the restart file. and should be set to either a specific report step, or 0 to load the last stored report step. </text:p>
+       <text:p text:style-name="P960">An integer value that determines if the simulator should load the serialized state from OPM Flow&apos;s version of the restart file, and should be set to either a specific report step, or 0 to load the last stored report step. </text:p>
        <text:p text:style-name="P969">The default value of -1 does not load the data from the OPM Flow specific restart file.</text:p>
        <text:p text:style-name="P969">OPM Flow&apos;s version of the restart file, is written using the <text:span text:style-name="T37">--save-step=N</text:span> option.</text:p>
       </table:table-cell>
@@ -30133,7 +30133,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P671">--max-newton-iterations-with-inner-well-iterations</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table621.A2" office:value-type="string">
-       <text:p text:style-name="P869">A positive integer that specifies the maximum newton iterations with inner well iterations.</text:p>
+       <text:p text:style-name="P869">A positive integer that specifies the maximum Newton iterations with inner well iterations.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table621.D2" office:value-type="string">
        <text:p text:style-name="P407">8</text:p>
@@ -30426,7 +30426,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P1047"><text:soft-page-break/><text:span text:style-name="T6">&quot;steps&quot;</text:span> writes out convergence information per time step, to a CASENAME.INFOSTEP file. The file is useful for identifying numerical issues. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P1047"><text:span text:style-name="T6">&quot;iterations&quot; </text:span>writes out n<text:span text:style-name="T6">on-linear convergence metrics, i.e., the MB and CNV values, per phase, for each non-linear iteration in each time</text:span> <text:span text:style-name="T6">step</text:span>, to a CASENAME.<text:span text:style-name="T26">INFOITER</text:span><text:span text:style-name="T6"> file. </text:span></text:p>
+         <text:p text:style-name="P1047"><text:span text:style-name="T6">&quot;iterations&quot; </text:span>writes out n<text:span text:style-name="T6">on-linear convergence metrics, i.e., the MB and CNV values, per phase, for each non-linear iteration in each time</text:span> <text:span text:style-name="T6">step</text:span>, to a CASENAME.INFOITER file.</text:p>
         </text:list-item>
        </text:list>
        <text:p text:style-name="P838">Options can be c<text:span text:style-name="T6">ombin</text:span>ed<text:span text:style-name="T6"> with commas, e.g.&quot;steps,iterations&quot; for multiple outputs.</text:span> </text:p>
@@ -30471,7 +30471,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
         </text:list-item>
        </text:list>
        <text:p text:style-name="P960">For example to just output logging information use:</text:p>
-       <text:p text:style-name="P958">--output-mode=”log” </text:p>
+       <text:p text:style-name="P958">--output-mode=“log”.</text:p>
        <text:p text:style-name="P961">or</text:p>
        <text:p text:style-name="P958">--output-mode=false</text:p>
       </table:table-cell>
@@ -30774,7 +30774,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table621.A2" office:value-type="string">
        <text:p text:style-name="P960">A boolean value that determines if the simulator should fully solve the well equations before each iteration of the reservoir model (true), or not (false).</text:p>
-       <text:p text:style-name="P960">Note that the well equations are <text:span text:style-name="T33">always</text:span> added to the full system and solved <text:span text:style-name="T33">until</text:span> converged. </text:p>
+       <text:p text:style-name="P960">Note that the well equations are <text:span text:style-name="T33">always</text:span> added to the full system and solved until convergence.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table621.D2" office:value-type="string">
        <text:p text:style-name="P211">true</text:p>
@@ -30829,7 +30829,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P934"><text:span text:style-name="T13">--solver-max-growth</text:span> <text:s text:c="28"/></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table621.A2" office:value-type="string">
-       <text:p text:style-name="P671">A real positive value that specifies the maximum growth factor a time step can be increased by after a report time step. subject to the maximum allowable time step size set by the --solver-max-time-step-in-days parameter.</text:p>
+       <text:p text:style-name="P671">A real positive value that specifies the maximum growth factor a time step can be increased by after a report time step, subject to the maximum allowable time step size set by the --solver-max-time-step-in-days parameter.</text:p>
        <text:p text:style-name="P635">T<text:span text:style-name="T40">hus, if </text:span>the current time step has converged at 5 days after a<text:span text:style-name="T40">t a report</text:span> step<text:span text:style-name="T40">,</text:span> <text:s/>and --solver-<text:span text:style-name="T41">max-</text:span>growth is set to the default value of <text:span text:style-name="T40">3</text:span>.0, then the next time step will be <text:span text:style-name="T40">3</text:span>.0 * 5 days, that is at 1<text:span text:style-name="T40">5 </text:span>days.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table621.D2" office:value-type="string">
@@ -30932,7 +30932,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P960">--strict-outer-iter-wells</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table621.C27" office:value-type="string">
-       <text:p text:style-name="P960">A positive integer that specifies the number of newton iterations for which wells are checked with strict tolerance.</text:p>
+       <text:p text:style-name="P960">A positive integer that specifies the number of Newton iterations for which wells are checked with strict tolerance.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table621.D107" office:value-type="string">
        <text:p text:style-name="P517">6</text:p>
@@ -31000,7 +31000,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P671">--time-step-after-event-in-days <text:s text:c="11"/></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table621.A2" office:value-type="string">
-       <text:p text:style-name="P960">A real double precision value that sets maximum allowed time step after an event; for example, when a well is open or closed etc. </text:p>
+       <text:p text:style-name="P960">A real double precision value that sets the maximum allowed time step after an event; for example, when a well is open or closed etc. </text:p>
        <text:p text:style-name="P960">The default value of -1 means that events to do effect the time stepping.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table621.D2" office:value-type="string">
@@ -31073,7 +31073,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P671">--time-step-control-file-name <text:s text:c="18"/></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table621.C114" office:value-type="string">
-       <text:p text:style-name="P960">A character string enclosed in quotes that specifies a filename where time steps are specified. The default is the character string timesteps</text:p>
+       <text:p text:style-name="P960">A character string enclosed in quotes that specifies a filename where time steps are specified. The default is the character string timesteps.</text:p>
        <text:p text:style-name="P960">For instance time steps can be generated by the ecl_summary application in libecl as per the following UNIX command line: </text:p>
        <text:p text:style-name="P960"/>
        <text:p text:style-name="P725">path_to_libecl_applications/ecl_summary DECK TIME &gt; filename</text:p>
